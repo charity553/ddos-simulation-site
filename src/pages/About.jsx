@@ -17,36 +17,13 @@ const About = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">Meet the Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-          <div className="text-center">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Serah Maina"
-              className="rounded-full mx-auto mb-4"
-            />
-            <h3 className="font-bold">Serah Maina</h3>
-            <p>Project Lead | Python, Flask, Monitoring</p>
-          </div>
-          <div className="text-center">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Charity Mulei"
-              className="rounded-full mx-auto mb-4"
-            />
-            <h3 className="font-bold">Charity Mulei</h3>
-            <p>Monitoring & Testing | psutil, Testing</p>
-          </div>
-          <div className="text-center">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Valentine Momanyi"
-              className="rounded-full mx-auto mb-4"
-            />
-            <h3 className="font-bold">Valentine Momanyi</h3>
-            <p>Data Visualization | Dash, UI/UX</p>
-          </div>
-        </div>
+        <h2 className="text-2xl font-semibold">Key Challenges in the Kenyan Economy</h2>
+        <ul className="list-disc ml-6 mt-4">
+          <li>Limited access to affordable digital infrastructure and cybersecurity resources</li>
+          <li>Lack of technical capacity to handle cyber threats among startups and small businesses</li>
+          <li>Minimal inclusion of cyber resilience in entrepreneurship training programs</li>
+          <li>Fear of online expansion due to vulnerabilities to cyberattacks</li>
+        </ul>
       </section>
     </div>
   );

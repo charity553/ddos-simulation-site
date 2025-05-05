@@ -1,10 +1,18 @@
 // src/pages/Features.jsx
 import React from 'react';
 
-const Features = () => {
+const Problem = () => {
   return (
     <div className="p-8">
-      <h1 className="text-4xl font-bold mb-4 text-center">Features</h1>
+       <section className="mb-8">
+        <h2 className="text-2xl font-semibold">Problem Statement</h2>
+        <p className="mt-4 text-lg">
+          With the growing reliance on digital services, Kenya and many other countries face increasing cyber threats, 
+          especially Distributed Denial-of-Service (DDoS) attacks targeting banks, e-commerce platforms, and public services.
+          Cybersecurity education in the region, however, is largely theoretical, with few practical tools to simulate real-world 
+          attack scenarios in a safe, accessible way. This project addresses that gap.
+        </p>
+      </section>
 
       {/* Functional & Non-Functional Requirements Section */}
       <section className="mb-8">
@@ -43,13 +51,6 @@ const Features = () => {
           <li>Government digital security agencies</li>
           <li>IT audit firms</li>
           <li>Training bootcamps and educational institutions</li>
-        </ul>
-
-        <h3 className="text-xl font-semibold mt-4">User Challenges:</h3>
-        <ul className="list-disc ml-6 mt-2 text-lg">
-          <li>Lack of real-world exposure to DDoS attack simulations</li>
-          <li>Risk of testing on live servers</li>
-          <li>Absence of visual tools for understanding DDoS impact</li>
         </ul>
       </section>
 
@@ -103,4 +104,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Problem;

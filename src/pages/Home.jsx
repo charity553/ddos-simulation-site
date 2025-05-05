@@ -4,90 +4,72 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="p-8 text-center">
-      <h1 className="text-4xl font-bold mb-4 text-blue-600">DDoS Simulation Toolkit</h1>
-      
-      {/* Project Description */}
-      <p className="text-xl mb-6 max-w-3xl mx-auto">
-        As digital services continue to expand, cybersecurity threats like Distributed Denial-of-Service (DDoS) attacks pose a
-        growing risk. Our DDoS Simulation Toolkit provides a safe, ethical, and educational approach to understanding and defending
-        against these attacks. By simulating real-world DDoS behaviors, this tool helps students, cybersecurity professionals, and
-        businesses learn how to protect their systems from potential threats without the risk of causing actual harm.
-      </p>
+    <div className="min-h-screen bg-white">
+      {/* Navigation Bar */}
+      <nav className="sticky top-0 bg-white shadow z-10 px-6 py-4 flex justify-end space-x-6">
+        <Link to="/about" className="text-blue-600 font-semibold hover:underline">About</Link>
+        <Link to="/features" className="text-blue-600 font-semibold hover:underline">Problem</Link>
+        <Link to="/problem" className="text-blue-600 font-semibold hover:underline">Solution</Link>
+        <Link to="/team" className="text-blue-600 font-semibold hover:underline">Team</Link>
+      </nav>
 
-      {/* Call to Action */}
-      <div className="space-x-4 mb-8">
-        <Link to="/about" className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 text-lg">
-          Learn More About the Project
-        </Link>
-        <Link to="/features" className="bg-gray-800 text-white px-6 py-3 rounded hover:bg-gray-900 text-lg">
-          Explore Features
-        </Link>
-      </div>
+      {/* Landing Content */}
+      <header className="text-center p-10">
+        <h1 className="text-5xl font-bold text-blue-700 mb-4">DDoS Simulation Toolkit</h1>
+        <p className="text-xl max-w-3xl mx-auto text-gray-700">
+          A Python-based educational toolkit to simulate and understand Distributed Denial-of-Service (DDoS) attacks safely and ethically. Ideal for students, trainers, and institutions.
+        </p>
+      </header>
 
-      {/* Key Highlights Section */}
-      <section className="bg-gray-100 p-6 rounded-lg shadow-md mb-8">
-        <h2 className="text-2xl font-semibold text-center mb-4">Key Highlights</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-center space-x-4">
-            <div className="bg-blue-200 p-4 rounded-full">
-              <i className="fas fa-shield-alt text-3xl text-blue-600"></i>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Safe & Ethical Simulations</h3>
-              <p className="text-lg">
-                The toolkit ensures no actual attacks are launched, providing a safe environment for learning about DDoS attacks.
-              </p>
-            </div>
-          </div>
+      {/* About Preview */}
+      <section className="p-8 bg-gray-50">
+        <h2 className="text-3xl font-semibold mb-2">About</h2>
+        <p className="text-lg text-gray-700">
+          As cyber threats grow, this toolkit simulates DDoS attacks in a controlled environment, providing safe learning for users in Kenya and beyond. It addresses the lack of practical training tools in cybersecurity education.
+        </p>
+      </section>
 
-          <div className="flex items-center space-x-4">
-            <div className="bg-green-200 p-4 rounded-full">
-              <i className="fas fa-chart-line text-3xl text-green-600"></i>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Real-Time Visualizations</h3>
-              <p className="text-lg">
-                Visualize the effects of simulated DDoS attacks with real-time dashboards to monitor system load and traffic patterns.
-              </p>
-            </div>
-          </div>
+      {/* Problem Preview */}
+      <section className="p-8">
+        <h2 className="text-3xl font-semibold mb-2">Problem</h2>
+        <p className="text-lg text-gray-700">
+          Kenya faces growing DDoS threats amid limited cybersecurity tools. This project fills that gap by offering hands-on, safe simulations for training and awareness.
+        </p>
+      </section>
 
-          <div className="flex items-center space-x-4">
-            <div className="bg-yellow-200 p-4 rounded-full">
-              <i className="fas fa-users text-3xl text-yellow-600"></i>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Designed for Education</h3>
-              <p className="text-lg">
-                This toolkit is ideal for cybersecurity students, trainers, and professionals looking for hands-on experience.
-              </p>
-            </div>
-          </div>
+      {/* Solution Preview */}
+      <section className="p-8 bg-gray-50">
+        <h2 className="text-3xl font-semibold mb-2">Solution</h2>
+        <p className="text-lg text-gray-700">
+          Our Python-based simulation environment mirrors real DDoS effects without the risks. Learners interact with traffic simulations, monitoring tools, and dashboards.
+        </p>
+      </section>
 
-          <div className="flex items-center space-x-4">
-            <div className="bg-red-200 p-4 rounded-full">
-              <i className="fas fa-cogs text-3xl text-red-600"></i>
+      {/* Team Preview */}
+      <section className="p-8">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Meet the Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            { name: 'Serah Maina', role: 'Project Lead', image: '/assets/serah.jpg' },
+            { name: 'Charity Mulei', role: 'Monitoring & Testing', image: '/assets/charity.jpg' },
+            { name: 'Valentine Momanyi', role: 'Data Visualization', image: '/assets/valentine.jpg' },
+          ].map((member, i) => (
+            <div key={i} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src={member.image} alt={member.name} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
+                <p className="text-blue-600">{member.role}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold">Customizable Tools</h3>
-              <p className="text-lg">
-                Customize attack parameters, monitor system performance, and generate reports for better understanding and analysis.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Call to Action for Engagement */}
-      <div className="space-x-4">
-        <p className="text-lg mb-4">
-          Ready to dive into the world of DDoS simulations and enhance your cybersecurity skills? Start exploring now!
-        </p>
-        <Link to="/features" className="bg-gray-800 text-white px-6 py-3 rounded hover:bg-gray-900 text-lg">
-          Get Started with Features
-        </Link>
-      </div>
+      {/* Call to Action */}
+      <footer className="p-6 text-center bg-blue-50">
+        <h3 className="text-xl mb-2 font-semibold">Ready to explore more?</h3>
+        <Link to="/features" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Get Started</Link>
+      </footer>
     </div>
   );
 };
