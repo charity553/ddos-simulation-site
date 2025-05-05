@@ -5,7 +5,7 @@ const teamMembers = [
     name: 'Serah Maina',
     role: 'Project Lead',
     skills: 'Python, Flask, Monitoring, Dash',
-    image: '/assets/serah.jpg', // Replace with your actual images
+    image: '/assets/Serah.jpg', // Replace with your actual images
   },
   {
     name: 'Charity Mulei',
@@ -17,7 +17,7 @@ const teamMembers = [
     name: 'Valentine Momanyi',
     role: 'Data Visualization',
     skills: 'Dash/Streamlit, UI/UX, Python',
-    image: '/assets/valentine.jpg',
+    image: '/assets/Valentine.jpg',
   },
 ];
 

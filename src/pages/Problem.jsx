@@ -1,105 +1,132 @@
-// src/pages/Features.jsx
 import React from 'react';
+import {
+  ShieldAlert,
+  ListChecks,
+  Users,
+  Cpu,
+  Terminal,
+  LayoutDashboard,
+} from 'lucide-react';
 
 const Problem = () => {
   return (
-    <div className="p-8">
-       <section className="mb-8">
-        <h2 className="text-2xl font-semibold">Problem Statement</h2>
-        <p className="mt-4 text-lg">
-          With the growing reliance on digital services, Kenya and many other countries face increasing cyber threats, 
-          especially Distributed Denial-of-Service (DDoS) attacks targeting banks, e-commerce platforms, and public services.
-          Cybersecurity education in the region, however, is largely theoretical, with few practical tools to simulate real-world 
-          attack scenarios in a safe, accessible way. This project addresses that gap.
-        </p>
-      </section>
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: 'url(/assets/four.jpg)' }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
 
-      {/* Functional & Non-Functional Requirements Section */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold">Functional Requirements</h2>
-        <ul className="list-disc ml-6 mt-4 text-lg">
-          <li>User can run predefined attack scripts via a GUI or CLI</li>
-          <li>Control parameters: request rate, duration, and endpoint</li>
-          <li>Simulate spikes in CPU/RAM usage with real-time monitoring</li>
-          <li>Generate logs with attack pattern indicators and visualize them in dashboards</li>
-          <li>Generate reports after each simulation with attack summaries and insights</li>
-        </ul>
-      </section>
+      {/* Content */}
+      <div className="relative z-10 p-8 text-gray-800">
+        {/* Problem Statement */}
+        <section className="mb-12 bg-white/90 rounded-xl p-6 shadow-lg">
+          <div className="flex items-center mb-4">
+            <ShieldAlert className="text-blue-600 w-7 h-7 mr-3" />
+            <h2 className="text-3xl font-bold text-blue-800">Problem Statement</h2>
+          </div>
+          <p className="text-lg leading-relaxed">
+            With the growing reliance on digital services, Kenya and other countries face increasing cyber threats —
+            especially DDoS attacks. Cybersecurity education is largely theoretical, with few practical tools for
+            real-world safe simulations. This project closes that gap.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold">Non-Functional Requirements</h2>
-        <ul className="list-disc ml-6 mt-4 text-lg">
-          <li>Security: No real attacks launched; safe, local sandbox</li>
-          <li>Usability: Visual tools with easy-to-understand output for non-experts</li>
-          <li>Portability: Runs on any laptop with Python installed, Docker optional</li>
-          <li>Maintainability: Modular Python code, open-source libraries</li>
-          <li>Ethical Compliance: Educational use only, with a usage disclaimer</li>
-        </ul>
-      </section>
+        {/* Functional Requirements */}
+        <section className="mb-12 bg-white/90 rounded-xl p-6 shadow-lg">
+          <div className="flex items-center mb-4">
+            <ListChecks className="text-blue-600 w-7 h-7 mr-3" />
+            <h2 className="text-3xl font-bold text-blue-800">Functional Requirements</h2>
+          </div>
+          <ul className="list-disc ml-6 text-lg space-y-2">
+            <li>Run predefined attack scripts via GUI or CLI</li>
+            <li>Adjust request rate, duration, endpoint</li>
+            <li>Simulate CPU/RAM stress with real-time monitoring</li>
+            <li>Visual dashboards of logs and traffic patterns</li>
+            <li>Report generation after each simulation</li>
+          </ul>
+        </section>
 
-      {/* Target Users & Beneficiaries Section */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold">Target Users and Beneficiaries</h2>
-        <h3 className="text-xl font-semibold mt-4">Primary Users:</h3>
-        <ul className="list-disc ml-6 mt-2 text-lg">
-          <li>Cybersecurity students, trainers, and academic institutions</li>
-          <li>IT professionals and security researchers</li>
-        </ul>
+        {/* Non-Functional */}
+        <section className="mb-12 bg-white/90 rounded-xl p-6 shadow-lg">
+          <div className="flex items-center mb-4">
+            <Terminal className="text-blue-600 w-7 h-7 mr-3" />
+            <h2 className="text-3xl font-bold text-blue-800">Non-Functional Requirements</h2>
+          </div>
+          <ul className="list-disc ml-6 text-lg space-y-2">
+            <li>Safe sandbox; no real-world attacks</li>
+            <li>Easy-to-use GUI with clear output</li>
+            <li>Cross-platform with minimal setup</li>
+            <li>Modular, maintainable Python code</li>
+            <li>Strictly educational and ethical usage</li>
+          </ul>
+        </section>
 
-        <h3 className="text-xl font-semibold mt-4">Secondary Users:</h3>
-        <ul className="list-disc ml-6 mt-2 text-lg">
-          <li>Government digital security agencies</li>
-          <li>IT audit firms</li>
-          <li>Training bootcamps and educational institutions</li>
-        </ul>
-      </section>
+        {/* Target Users */}
+        <section className="mb-12 bg-white/90 rounded-xl p-6 shadow-lg">
+          <div className="flex items-center mb-4">
+            <Users className="text-blue-600 w-7 h-7 mr-3" />
+            <h2 className="text-3xl font-bold text-blue-800">Target Users</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+            <div>
+              <h3 className="text-xl font-semibold text-blue-700">Primary:</h3>
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li>Cybersecurity students & trainers</li>
+                <li>Universities and colleges</li>
+                <li>Security researchers</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-blue-700">Secondary:</h3>
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li>Government security agencies</li>
+                <li>IT audit firms</li>
+                <li>Bootcamps and training hubs</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-      {/* Tools & Technologies Section */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold">Tools & Technologies</h2>
-        <div className="grid grid-cols-2 gap-4 mt-4">
-          <div className="bg-gray-100 p-4 rounded-md shadow-md">
-            <h3 className="text-xl font-semibold">Traffic Simulation</h3>
-            <p className="text-lg">Python, Flask, requests, threading, custom scripts</p>
+        {/* Tools & Technologies */}
+        <section className="mb-12">
+          <div className="flex items-center mb-4">
+            <Cpu className="text-blue-600 w-7 h-7 mr-3" />
+            <h2 className="text-3xl font-bold text-blue-800">Tools & Technologies</h2>
           </div>
-          <div className="bg-gray-100 p-4 rounded-md shadow-md">
-            <h3 className="text-xl font-semibold">System Resource Monitoring</h3>
-            <p className="text-lg">psutil (for CPU, memory, network usage simulation)</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {[
+              { title: "Traffic Simulation", desc: "Python, Flask, requests, threading" },
+              { title: "Resource Monitoring", desc: "psutil for CPU, memory tracking" },
+              { title: "Log Analysis", desc: "Python logging + custom parsers" },
+              { title: "Dashboards", desc: "Streamlit or Dash for data views" },
+              { title: "Containerization", desc: "Docker for sandbox environment" },
+              { title: "Performance Alerts", desc: "Logic-based CPU/request thresholds" },
+            ].map((tool, i) => (
+              <div key={i} className="bg-white/90 p-4 rounded-lg shadow-md hover:scale-[1.02] transition-all">
+                <h3 className="text-xl font-bold text-blue-800 mb-1">{tool.title}</h3>
+                <p className="text-gray-700">{tool.desc}</p>
+              </div>
+            ))}
           </div>
-          <div className="bg-gray-100 p-4 rounded-md shadow-md">
-            <h3 className="text-xl font-semibold">Log Analysis</h3>
-            <p className="text-lg">Custom log generator, Python logging module</p>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-md shadow-md">
-            <h3 className="text-xl font-semibold">Visualization</h3>
-            <p className="text-lg">Dash or Streamlit for dashboards</p>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-md shadow-md">
-            <h3 className="text-xl font-semibold">Containerization</h3>
-            <p className="text-lg">Docker</p>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-md shadow-md">
-            <h3 className="text-xl font-semibold">Performance Alerts</h3>
-            <p className="text-lg">Simple logic thresholds for CPU usage, request rates, etc.</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Methodology Section */}
-      <section>
-        <h2 className="text-2xl font-semibold">Methodology</h2>
-        <p className="mt-4 text-lg">
-          The project follows a systematic methodology involving:
-        </p>
-        <ul className="list-disc ml-6 mt-4 text-lg">
-          <li>Research & Planning: Understanding DDoS behavior and designing scripts</li>
-          <li>Design & Environment Setup: Developing the simulation engine and traffic generator</li>
-          <li>Simulation Scripting: Adding system monitoring with psutil</li>
-          <li>Monitoring Integration: Building dashboards with Streamlit or Dash</li>
-          <li>Dashboard & Reporting: Generating logs and implementing report logic</li>
-          <li>Testing & Documentation: Final testing, polishing code, and UI</li>
-        </ul>
-      </section>
+        {/* Methodology */}
+        <section className="bg-white/90 rounded-xl p-6 shadow-lg">
+          <div className="flex items-center mb-4">
+            <LayoutDashboard className="text-blue-600 w-7 h-7 mr-3" />
+            <h2 className="text-3xl font-bold text-blue-800">Methodology</h2>
+          </div>
+          <ul className="list-disc ml-6 mt-4 text-lg space-y-2">
+            <li>Research & script design for DDoS patterns</li>
+            <li>Simulation engine + traffic generator setup</li>
+            <li>System monitoring with psutil</li>
+            <li>Interactive dashboards with Streamlit/Dash</li>
+            <li>Log generation and reporting logic</li>
+            <li>Testing, refinement, and documentation</li>
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };
