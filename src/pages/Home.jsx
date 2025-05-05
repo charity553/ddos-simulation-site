@@ -5,13 +5,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Bar */}
-      <nav className="sticky top-0 bg-white shadow z-10 px-6 py-4 flex justify-end space-x-6">
-        <Link to="/about" className="text-blue-600 font-semibold hover:underline">About</Link>
-        <Link to="/features" className="text-blue-600 font-semibold hover:underline">Problem</Link>
-        <Link to="/problem" className="text-blue-600 font-semibold hover:underline">Solution</Link>
-        <Link to="/team" className="text-blue-600 font-semibold hover:underline">Team</Link>
-      </nav>
 
       {/* Landing Content */}
       <header className="text-center p-10">
