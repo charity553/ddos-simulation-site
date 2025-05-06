@@ -26,6 +26,7 @@ const Problem = () => {
             <h2 className="text-3xl font-bold text-blue-800">Problem Statement</h2>
           </div>
           <p className="text-lg leading-relaxed">
+          “How can we prepare our servers or websites to survive a traffic attack?”<br />
             With the growing reliance on digital services, Kenya and other countries face increasing cyber threats —
             especially DDoS attacks. Cybersecurity education is largely theoretical, with few practical tools for
             real-world safe simulations. This project closes that gap.

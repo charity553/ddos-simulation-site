@@ -28,7 +28,7 @@ const Home = () => {
         <section className="p-8">
           <h2 className="text-3xl font-semibold mb-2">Problem</h2>
           <p className="text-lg text-gray-700">
-            Kenya faces growing DDoS threats amid limited cybersecurity tools. This project fills that gap by offering hands-on, safe simulations for training and awareness.
+          How can we prepare our servers or websites to survive a traffic attack?
           </p>
         </section>
 
