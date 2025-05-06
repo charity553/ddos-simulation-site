@@ -55,11 +55,9 @@ const Problem = () => {
             <h2 className="text-3xl font-bold text-blue-800">Non-Functional Requirements</h2>
           </div>
           <ul className="list-disc ml-6 text-lg space-y-2">
-            <li>Safe sandbox; no real-world attacks</li>
             <li>Easy-to-use GUI with clear output</li>
             <li>Cross-platform with minimal setup</li>
             <li>Modular, maintainable Python code</li>
-            <li>Strictly educational and ethical usage</li>
           </ul>
         </section>
 
@@ -73,8 +71,8 @@ const Problem = () => {
             <div>
               <h3 className="text-xl font-semibold text-blue-700">Primary:</h3>
               <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Cybersecurity students & trainers</li>
-                <li>Universities and colleges</li>
+                <li>Small Businesses</li>
+                <li>IT Professionals</li>
                 <li>Security researchers</li>
               </ul>
             </div>
@@ -102,7 +100,6 @@ const Problem = () => {
               { title: "Log Analysis", desc: "Python logging + custom parsers" },
               { title: "Dashboards", desc: "Streamlit or Dash for data views" },
               { title: "Containerization", desc: "Docker for sandbox environment" },
-              { title: "Performance Alerts", desc: "Logic-based CPU/request thresholds" },
             ].map((tool, i) => (
               <div key={i} className="bg-white/90 p-4 rounded-lg shadow-md hover:scale-[1.02] transition-all">
                 <h3 className="text-xl font-bold text-blue-800 mb-1">{tool.title}</h3>
