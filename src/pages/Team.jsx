@@ -5,7 +5,7 @@ const teamMembers = [
     name: 'Serah Maina',
     role: 'Project Lead',
     skills: 'Python, Flask, Monitoring, Dash',
-    image: '/assets/Serah.jpg', // Replace with your actual images
+    image: '/assets/Serah.jpg',
   },
   {
     name: 'Charity Mulei',

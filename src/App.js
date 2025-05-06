@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Problem from "./pages/Problem";
 import Team from "./pages/Team";
 import Solution from "./pages/Solution";
+import Layout from "./components/Layout";
 
 function App() {
   return (
@@ -12,11 +13,11 @@ function App() {
       <div className="bg-gray-50 min-h-screen text-gray-800">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/problem" element={<Problem />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/solution" element={<Solution />} />
+        <Route path="/" element={<Layout><Home /> </Layout>} />
+          <Route path="/about" element={<Layout><About /> </Layout>} />
+          <Route path="/problem" element={<Layout><Problem /> </Layout>} />
+          <Route path="/team" element={<Layout><Team /> </Layout>} />
+          <Route path="/solution" element={<Layout> <Solution /> </Layout>} />
         </Routes>
       </div>
     </Router>
